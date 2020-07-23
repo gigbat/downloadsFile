@@ -1,3 +1,5 @@
+package downloads;
+
 public class ProgressBar extends Thread {
     public void progress() throws InterruptedException {
         for (int i = 0; i < 101; i+=10) {
