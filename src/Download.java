@@ -14,7 +14,6 @@ public class Download {
     public static void main(String[] args) throws IOException {
         Download download = new Download();
         download.download();
-        System.out.println("asdasd");
     }
 
     public void download() {
