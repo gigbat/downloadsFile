@@ -3,17 +3,18 @@ import java.net.URL;
 
 // @links https://code.jquery.com/jquery-3.5.1.min.js
 
-public class Download {
+public class Download extends Thread {
     BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
     final String FILE_URL;
 
     public Download() throws IOException {
+        System.out.println("Input link to the file");
         FILE_URL = bf.readLine();
     }
 
-    public static void main(String[] args) throws IOException {
-        Download download = new Download();
-        download.download();
+    @Override
+    public void run() {
+        download();
     }
 
     public void download() {
